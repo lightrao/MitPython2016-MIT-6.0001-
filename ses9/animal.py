@@ -1,25 +1,37 @@
 class Animal(object):
-    a=22
     def __init__(self, age):
-        self.age = age
+        self.years = age
         self.name = None
+
     def get_age(self):
-        return self.age
+        return self.years
+
     def get_name(self):
         return self.name
+
     def set_age(self, newage):
-        self.age = newage
+        self.years = newage
+
     def set_name(self, newname=""):
         self.name = newname
-    def __str__(self):
-        return "animal:"+str(self.name)+":"+str(self.age)
 
-class Cat(Animal):
-    def speak(self):
-        print("meow")
     def __str__(self):
-        return "cat:"+str(self.name)+":"+str(self.age)
+        return "animal:"+str(self.name)+":"+str(self.years)
 
-a=Animal(22)
-c=Cat(11)
-print(a)
+
+if __name__ == "__main__":
+    a=Animal(4)
+    a.set_name()
+    print(a.get_name())
+    a.set_name("lite")
+    print(a.get_name())
+
+    
+    # myanimal = Animal(3)
+    # myanimal.set_age(22)
+    # myanimal.set_name("Peter")
+    # myanimal.size="big"
+    # print(myanimal.get_age())
+    # print(myanimal.get_name())
+    # print(myanimal.size)
+    
